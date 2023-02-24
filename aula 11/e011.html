@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pais</title>
+</head>
+<body>
+    <h1>De que pais você é</h1>
+    Digite de onde você e <input type="text" name="pais" id="pais"> <br>
+    <input type="button" value="Enviar" onclick="enviar()">
+    <div id="res"></div>
+    <script>
+    function enviar() {
+        var pais = window.document.getElementById('pais')
+        var res = window.document.getElementById('res')
+        var p = (pais.value)
+        res.innerHTML += (`Vivendo em <strong>${p}</strong> você é `)
+        if (p == 'Brasil') {
+            res.innerHTML += (`<strong>Brasileiro</strong>`)
+        }else{
+            res.innerHTML += (`<strong>Estrangeiro</strong>`)
+        }
+    }
+    </script>
+</body>
+</html>
